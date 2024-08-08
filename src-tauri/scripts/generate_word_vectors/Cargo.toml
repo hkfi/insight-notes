@@ -1,0 +1,18 @@
+[package]
+name = "generate_words_vectors_sqlite"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+tokio = { version = "1.33.0", features = ["time", "rt", "macros"] }
+sqlx = { version = "0.7.2", features = ["sqlite", "runtime-tokio"] }
+serde = "1.0"
+serde_json = "1.0"
+rust-bert = { version = "0.22.0", features= ["download-libtorch"] }
+anyhow = "1.0"
+libsqlite3-sys = { version = "=0.27.0", features = ["bundled"] }
+libc = "0.2.155"
+sqlite-vec = "0.0.1-alpha.37"
+
+[dependencies.app]
+path = "../../" # Path to your main project's root
